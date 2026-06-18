@@ -16,3 +16,4 @@ Get-ChildItem -Directory | Where-Object {
 }
 # Finally push all commits
 git push -u origin main
+ 
