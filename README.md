@@ -117,13 +117,27 @@ scored precisely. Swap in your own Week 15 corpus by dropping markdown files in
 
 ## Metrics & targets
 
-| Metric | Asks | Week 15 target (`eval/targets.json`) |
-|---|---|---|
-| Faithfulness | Does every claim trace to retrieved context? | >= 0.90 |
-| Answer relevancy | Does the answer address the question? | >= 0.80 |
-| Context precision | Are retrieved chunks relevant & well-ordered? | >= 0.70 |
-| Context recall | Does retrieved context contain the answer? | >= 0.80 |
-| Abstention accuracy | Does it say "I don't know" on adversarial rows? | >= 0.90 |
+```mermaid
+flowchart LR
+    A[User] --> B[CLI]
+    B --> C[Agent]
+    C --> D[Retriever]
+    D -->|Hybrid| E[Vectorstore]
+    D -->|BM25| F[Lexical Index]
+    E --> G[RRF Fusion]
+    G --> H[LLM (Groq/OpenAI)]
+    H --> I[Answer with Citations]
+    I --> J[Langfuse Tracing]
+```
+
+
+| Metric | Asks | Week 15 target | **Measured (ragas)** | Pass/Fail |
+|---|---|---|---|---|
+| Faithfulness | Does every claim trace to retrieved context? | >= 0.90 | **0.740** | ❌ FAIL |
+| Answer relevancy | Does the answer address the question? | >= 0.80 | **0.729** | ❌ FAIL |
+| Context precision | Are retrieved chunks relevant & well-ordered? | >= 0.70 | **0.830** | ✅ PASS |
+| Context recall | Does retrieved context contain the answer? | >= 0.80 | **0.863** | ✅ PASS |
+| Abstention accuracy | Does it say "I don't know" on adversarial rows? | >= 0.90 | **1.000** | ✅ PASS |
 
 The scorecard (`eval/results/baseline_scorecard.md`) prints metric -> score ->
 target -> pass/fail, plus Tier A operational readings (avg/p95 latency, cost/query).
@@ -140,16 +154,30 @@ your real run); the one-page memo is in `EXEC_MEMO.md`.
 
 ---
 
-## Reflection (fill in after your real run)
+## Reflection (filled after real ragas run — 2026-06-18)
 
 **Where did the system fail most - retrieval or generation?**
-_Compare context_recall/precision (retrieval) against faithfulness (generation).
-Low recall + high faithfulness => retrieval problem; high recall + low
-faithfulness => generation problem._
+
+Retrieval improved significantly: `context_recall = 0.863` and `context_precision = 0.830` both exceed their targets. The bottleneck is now squarely in **generation** — `faithfulness = 0.740` is the weakest metric, meaning the LLM occasionally introduces claims not grounded in the retrieved context. The hybrid (vector + BM25 + RRF) retrieval mode and increased `top_k = 16` clearly helped the retrieval side.
 
 **Did any metric look good while the answer was bad?**
-_e.g. high answer_relevancy on a fluent but unsupported answer shows why a single
-metric is not enough - faithfulness is the guardrail._
+
+Yes — `answer_relevancy = 0.729` is near the 0.80 target; the answers feel on-topic but some lack strict grounding. This is exactly the pattern warned about: a fluent, relevant-sounding answer that still fails `faithfulness`. The two metrics together act as complementary guardrails.
 
 **Which Week 15 target did you hit, miss, or revise?**
-_State the target, the measured number, and what you changed after seeing it._
+
+| Metric | Target | Measured | Result |
+|---|---|---|---|
+| context_precision | 0.70 | **0.830** | ✅ HIT (+0.130 above target) |
+| context_recall | 0.80 | **0.863** | ✅ HIT (+0.063 above target) |
+| abstention_accuracy | 0.90 | **1.000** | ✅ HIT (perfect) |
+| answer_relevancy | 0.80 | **0.729** | ❌ MISS (−0.071) |
+| faithfulness | 0.90 | **0.740** | ❌ MISS (−0.160) |
+
+Changes made after seeing baseline (faithfulness 0.686, answer_relevancy 0.229):
+- Switched `retrieval_mode` → `hybrid` (vector + BM25 + RRF)
+- Increased `top_k` from 4 → 16, `candidate_k` from 10 → 40
+- Changed `prompt_variant` → `cot_grounded` (chain-of-thought grounded prompt)
+- Added valid Groq API key to enable real LLM provider
+
+These changes raised context metrics above target; faithfulness and relevancy remain work in progress (larger model or stricter prompt constraints are the next levers).
