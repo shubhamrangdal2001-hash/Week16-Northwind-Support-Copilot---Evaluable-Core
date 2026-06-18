@@ -18,3 +18,4 @@ Engine: **heuristic-offline**  |  Generated: 2026-06-18T13:00:39.713051+00:00
 - p95 latency: 4390.4 ms
 - Avg cost / query: $2e-05
 - Total queries: 32
+ 
