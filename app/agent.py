@@ -62,3 +62,4 @@ if __name__ == "__main__":
     q = " ".join(sys.argv[1:]) or "What is the status of order NW-1001?"
     r = handle(q)
     print(f"[route={r.route}] {r.answer}")
+ 
