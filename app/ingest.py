@@ -71,3 +71,4 @@ def ingest(settings: Settings | None = None, rebuild: bool = True) -> dict:
 
 if __name__ == "__main__":
     print(ingest())
+ 
