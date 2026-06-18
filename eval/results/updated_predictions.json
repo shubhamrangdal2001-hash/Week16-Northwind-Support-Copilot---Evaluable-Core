@@ -1,0 +1,829 @@
+[
+  {
+    "id": "easy-01",
+    "flavor": "easy",
+    "question": "How long does standard domestic shipping take?",
+    "ground_truth": "Standard domestic shipping takes 5 to 7 business days.",
+    "source_docs": [
+      "shipping-domestic"
+    ],
+    "answer": "Standard domestic shipping takes 5 to 7 business days [shipping-domestic].",
+    "contexts": [
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# International Shipping\n\nNorthwind ships to 40 countries.\n\n- International delivery takes 10 to 21 business days.\n- Import duties, customs fees, and taxes are the responsibility of the customer.\n- International orders are not eligible for free shipping.\n- Tracking is available but may not update while in transit through customs.",
+      "# Order Tracking\n\n- A tracking number is emailed to you as soon as your order ships.\n- You can also track orders under the Orders tab in your account.\n- Tracking can take up to 24 hours to show movement after it is generated.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-domestic",
+      "shipping-international",
+      "order-tracking",
+      "returns-policy"
+    ],
+    "latency_ms": 441.60540000302717,
+    "cost_usd": 2.136e-05,
+    "prompt_tokens": 400,
+    "completion_tokens": 17
+  },
+  {
+    "id": "easy-02",
+    "flavor": "easy",
+    "question": "When is domestic shipping free?",
+    "ground_truth": "Standard shipping is free on orders over $50; otherwise it costs $5.99.",
+    "source_docs": [
+      "shipping-domestic"
+    ],
+    "answer": "Domestic shipping is free on orders over $50 [shipping-domestic].",
+    "contexts": [
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# International Shipping\n\nNorthwind ships to 40 countries.\n\n- International delivery takes 10 to 21 business days.\n- Import duties, customs fees, and taxes are the responsibility of the customer.\n- International orders are not eligible for free shipping.\n- Tracking is available but may not update while in transit through customs.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-domestic",
+      "shipping-international",
+      "returns-policy",
+      "damaged-items"
+    ],
+    "latency_ms": 180.9849999990547,
+    "cost_usd": 2.0980000000000002e-05,
+    "prompt_tokens": 394,
+    "completion_tokens": 16
+  },
+  {
+    "id": "easy-03",
+    "flavor": "easy",
+    "question": "What is the return window for items?",
+    "ground_truth": "Items can be returned within 30 days of delivery.",
+    "source_docs": [
+      "returns-policy"
+    ],
+    "answer": "Items can be returned within 30 days of delivery [returns-policy].",
+    "contexts": [
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Refund Processing\n\n- Refunds are issued after we receive and inspect the returned item.\n- Once approved, refunds take 5 to 10 business days to appear.\n- Refunds are always issued to the original payment method.\n- If you paid with a Northwind gift card, the refund is returned as gift-card balance.\n- Original shipping charges are non-refundable unless the item was defective.",
+      "# Product Availability\n\n- Out-of-stock items display an expected restock date when available.\n- You can sign up for a back-in-stock alert on the product page.\n- Adding an item to your cart does not reserve stock.",
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays."
+    ],
+    "retrieved_doc_ids": [
+      "returns-policy",
+      "refunds-processing",
+      "product-availability",
+      "shipping-domestic"
+    ],
+    "latency_ms": 164.1927000018768,
+    "cost_usd": 2.1949999999999998e-05,
+    "prompt_tokens": 415,
+    "completion_tokens": 15
+  },
+  {
+    "id": "easy-04",
+    "flavor": "easy",
+    "question": "How long do refunds take to appear once approved?",
+    "ground_truth": "Refunds take 5 to 10 business days to appear after they are approved.",
+    "source_docs": [
+      "refunds-processing"
+    ],
+    "answer": "Once approved, refunds take 5 to 10 business days to appear [refunds-processing].",
+    "contexts": [
+      "# Refund Processing\n\n- Refunds are issued after we receive and inspect the returned item.\n- Once approved, refunds take 5 to 10 business days to appear.\n- Refunds are always issued to the original payment method.\n- If you paid with a Northwind gift card, the refund is returned as gift-card balance.\n- Original shipping charges are non-refundable unless the item was defective.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods.",
+      "# Order Cancellation\n\n- You can cancel an order yourself within 1 hour of placing it, from the Orders tab.\n- After 1 hour, contact support and we will try to stop it, but cannot guarantee it.\n- Once an order has shipped it cannot be cancelled; you must return it instead."
+    ],
+    "retrieved_doc_ids": [
+      "refunds-processing",
+      "returns-policy",
+      "subscription-cancellation",
+      "order-cancellation"
+    ],
+    "latency_ms": 168.92310000548605,
+    "cost_usd": 2.0750000000000003e-05,
+    "prompt_tokens": 383,
+    "completion_tokens": 20
+  },
+  {
+    "id": "easy-05",
+    "flavor": "easy",
+    "question": "Which credit cards do you accept?",
+    "ground_truth": "We accept Visa, Mastercard, and American Express.",
+    "source_docs": [
+      "payment-methods"
+    ],
+    "answer": "We accept Visa, Mastercard, and American Express [payment-methods].",
+    "contexts": [
+      "# Accepted Payment Methods\n\n- We accept Visa, Mastercard, and American Express.\n- We accept PayPal and Northwind gift cards.\n- We do not accept cash on delivery (COD) or cryptocurrency.\n- Only one gift card can be applied per order.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined.",
+      "# Business Accounts\n\n- Orders over 50 units qualify for volume discounts.\n- Business accounts get a dedicated account manager.\n- Approved business accounts can use Net-30 payment terms.",
+      "# Subscription Plans\n\n- Basic is free and includes standard features.\n- Plus costs $9 per month.\n- Pro costs $19 per month and adds priority support and early access to new features.\n- Annual billing saves two months compared with monthly billing."
+    ],
+    "retrieved_doc_ids": [
+      "payment-methods",
+      "payment-failures",
+      "business-accounts",
+      "subscription-plans"
+    ],
+    "latency_ms": 159.37189999385737,
+    "cost_usd": 1.8030000000000002e-05,
+    "prompt_tokens": 335,
+    "completion_tokens": 16
+  },
+  {
+    "id": "easy-06",
+    "flavor": "easy",
+    "question": "How long is the reset password link valid?",
+    "ground_truth": "The password reset link is valid for 60 minutes.",
+    "source_docs": [
+      "account-password-reset"
+    ],
+    "answer": "The reset password link is valid for 60 minutes [account-password-reset].",
+    "contexts": [
+      "# Resetting Your Password\n\n- Use the Forgot Password link on the sign-in page.\n- A reset email is sent; the reset link is valid for 60 minutes.\n- If you do not receive it, check spam or request a new link.",
+      "# Creating an Account\n\n- Sign up with an email address and a password of at least 8 characters.\n- A verification link is emailed to you; click it to activate the account.\n- The verification link expires after 24 hours.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods."
+    ],
+    "retrieved_doc_ids": [
+      "account-password-reset",
+      "account-creation",
+      "payment-failures",
+      "subscription-cancellation"
+    ],
+    "latency_ms": 152.2454999940237,
+    "cost_usd": 1.8330000000000002e-05,
+    "prompt_tokens": 341,
+    "completion_tokens": 16
+  },
+  {
+    "id": "easy-07",
+    "flavor": "easy",
+    "question": "How much does the Pro subscription cost?",
+    "ground_truth": "The Pro plan costs $19 per month.",
+    "source_docs": [
+      "subscription-plans"
+    ],
+    "answer": "The Pro subscription costs $19 per month [subscription-plans].",
+    "contexts": [
+      "# Subscription Plans\n\n- Basic is free and includes standard features.\n- Plus costs $9 per month.\n- Pro costs $19 per month and adds priority support and early access to new features.\n- Annual billing saves two months compared with monthly billing.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods.",
+      "# Discounts and Promotions\n\n- Only one promo code can be applied per order.\n- Promo codes cannot be combined with each other.\n- Subscribing to the newsletter gives you a one-time 10% off code.",
+      "# Creating an Account\n\n- Sign up with an email address and a password of at least 8 characters.\n- A verification link is emailed to you; click it to activate the account.\n- The verification link expires after 24 hours."
+    ],
+    "retrieved_doc_ids": [
+      "subscription-plans",
+      "subscription-cancellation",
+      "discounts-promotions",
+      "account-creation"
+    ],
+    "latency_ms": 151.67980000842363,
+    "cost_usd": 1.682e-05,
+    "prompt_tokens": 314,
+    "completion_tokens": 14
+  },
+  {
+    "id": "easy-08",
+    "flavor": "easy",
+    "question": "How long is the warranty on electronics?",
+    "ground_truth": "Electronics come with a 1-year limited warranty.",
+    "source_docs": [
+      "warranty-policy"
+    ],
+    "answer": "The warranty on electronics is 1 year [warranty-policy].",
+    "contexts": [
+      "# Warranty\n\n- Electronics come with a 1-year limited warranty.\n- The warranty covers manufacturing defects, not accidental or misuse damage.\n- Warranty claims require proof of purchase.",
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined."
+    ],
+    "retrieved_doc_ids": [
+      "warranty-policy",
+      "damaged-items",
+      "returns-policy",
+      "payment-failures"
+    ],
+    "latency_ms": 161.6506999998819,
+    "cost_usd": 1.8270000000000003e-05,
+    "prompt_tokens": 343,
+    "completion_tokens": 14
+  },
+  {
+    "id": "easy-09",
+    "flavor": "easy",
+    "question": "Within how long must I report a damaged item?",
+    "ground_truth": "You must report a damaged or defective item within 48 hours of delivery.",
+    "source_docs": [
+      "damaged-items"
+    ],
+    "answer": "You must report a damaged item within 48 hours of delivery [damaged-items].",
+    "contexts": [
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Warranty\n\n- Electronics come with a 1-year limited warranty.\n- The warranty covers manufacturing defects, not accidental or misuse damage.\n- Warranty claims require proof of purchase.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined."
+    ],
+    "retrieved_doc_ids": [
+      "damaged-items",
+      "returns-policy",
+      "warranty-policy",
+      "payment-failures"
+    ],
+    "latency_ms": 176.52400000952184,
+    "cost_usd": 1.8690000000000002e-05,
+    "prompt_tokens": 345,
+    "completion_tokens": 18
+  },
+  {
+    "id": "easy-10",
+    "flavor": "easy",
+    "question": "When are phone support hours?",
+    "ground_truth": "Phone support is available Monday to Friday, 9am to 6pm ET.",
+    "source_docs": [
+      "contact-support"
+    ],
+    "answer": "Phone support hours are Monday to Friday, 9am to 6pm ET. [contact-support]",
+    "contexts": [
+      "# Contacting Support\n\n- Live chat is available 24/7 from the Help menu.\n- Email support@northwind.example for a response within 24 hours.\n- Phone support is available Monday to Friday, 9am to 6pm ET.",
+      "# Order Cancellation\n\n- You can cancel an order yourself within 1 hour of placing it, from the Orders tab.\n- After 1 hour, contact support and we will try to stop it, but cannot guarantee it.\n- Once an order has shipped it cannot be cancelled; you must return it instead.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined.",
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost."
+    ],
+    "retrieved_doc_ids": [
+      "contact-support",
+      "order-cancellation",
+      "payment-failures",
+      "damaged-items"
+    ],
+    "latency_ms": 164.27519998978823,
+    "cost_usd": 1.951e-05,
+    "prompt_tokens": 355,
+    "completion_tokens": 22
+  },
+  {
+    "id": "easy-11",
+    "flavor": "easy",
+    "question": "How fast is expedited domestic shipping and what does it cost?",
+    "ground_truth": "Expedited shipping takes 2 to 3 business days and costs $14.99.",
+    "source_docs": [
+      "shipping-domestic"
+    ],
+    "answer": "Expedited domestic shipping takes 2 to 3 business days and costs $14.99 flat [shipping-domestic].",
+    "contexts": [
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# International Shipping\n\nNorthwind ships to 40 countries.\n\n- International delivery takes 10 to 21 business days.\n- Import duties, customs fees, and taxes are the responsibility of the customer.\n- International orders are not eligible for free shipping.\n- Tracking is available but may not update while in transit through customs.",
+      "# Order Tracking\n\n- A tracking number is emailed to you as soon as your order ships.\n- You can also track orders under the Orders tab in your account.\n- Tracking can take up to 24 hours to show movement after it is generated.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-domestic",
+      "shipping-international",
+      "order-tracking",
+      "returns-policy"
+    ],
+    "latency_ms": 171.2106000049971,
+    "cost_usd": 2.2329999999999998e-05,
+    "prompt_tokens": 405,
+    "completion_tokens": 26
+  },
+  {
+    "id": "easy-12",
+    "flavor": "easy",
+    "question": "How many units qualify for a volume discount?",
+    "ground_truth": "Orders over 50 units qualify for volume discounts.",
+    "source_docs": [
+      "business-accounts"
+    ],
+    "answer": "Orders over 50 units qualify for volume discounts. [business-accounts]",
+    "contexts": [
+      "# Business Accounts\n\n- Orders over 50 units qualify for volume discounts.\n- Business accounts get a dedicated account manager.\n- Approved business accounts can use Net-30 payment terms.",
+      "# Discounts and Promotions\n\n- Only one promo code can be applied per order.\n- Promo codes cannot be combined with each other.\n- Subscribing to the newsletter gives you a one-time 10% off code.",
+      "# Subscription Plans\n\n- Basic is free and includes standard features.\n- Plus costs $9 per month.\n- Pro costs $19 per month and adds priority support and early access to new features.\n- Annual billing saves two months compared with monthly billing.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item."
+    ],
+    "retrieved_doc_ids": [
+      "business-accounts",
+      "discounts-promotions",
+      "subscription-plans",
+      "returns-policy"
+    ],
+    "latency_ms": 167.12879999249708,
+    "cost_usd": 1.758e-05,
+    "prompt_tokens": 326,
+    "completion_tokens": 16
+  },
+  {
+    "id": "amb-01",
+    "flavor": "ambiguous",
+    "question": "How long does shipping take?",
+    "ground_truth": "It depends on the destination: standard domestic shipping takes 5 to 7 business days, while international shipping takes 10 to 21 business days.",
+    "source_docs": [
+      "shipping-domestic",
+      "shipping-international"
+    ],
+    "answer": "Domestic shipping takes 5 to 7 business days [shipping-domestic].",
+    "contexts": [
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# International Shipping\n\nNorthwind ships to 40 countries.\n\n- International delivery takes 10 to 21 business days.\n- Import duties, customs fees, and taxes are the responsibility of the customer.\n- International orders are not eligible for free shipping.\n- Tracking is available but may not update while in transit through customs.",
+      "# Order Tracking\n\n- A tracking number is emailed to you as soon as your order ships.\n- You can also track orders under the Orders tab in your account.\n- Tracking can take up to 24 hours to show movement after it is generated.",
+      "# Changing an Order\n\n- You can change the shipping address within 1 hour of placing an order.\n- Items in an order cannot be added or swapped; cancel and reorder instead.\n- Orders that have already shipped cannot be modified."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-domestic",
+      "shipping-international",
+      "order-tracking",
+      "order-modification"
+    ],
+    "latency_ms": 165.89730000123382,
+    "cost_usd": 2.031e-05,
+    "prompt_tokens": 379,
+    "completion_tokens": 17
+  },
+  {
+    "id": "amb-02",
+    "flavor": "ambiguous",
+    "question": "Can I cancel?",
+    "ground_truth": "You can cancel an order within 1 hour of placing it, or cancel a subscription anytime from settings with access until the end of the billing period. Please clarify whether you mean an order or a subscription.",
+    "source_docs": [
+      "order-cancellation",
+      "subscription-cancellation"
+    ],
+    "answer": "You can cancel an order yourself within 1 hour of placing it, from the Orders tab [order-cancellation]. After 1 hour, contact support and we will try to stop it, but cannot guarantee it. Once an order has shipped it cannot be cancelled; you must return it instead [order-cancellation].",
+    "contexts": [
+      "# Order Cancellation\n\n- You can cancel an order yourself within 1 hour of placing it, from the Orders tab.\n- After 1 hour, contact support and we will try to stop it, but cannot guarantee it.\n- Once an order has shipped it cannot be cancelled; you must return it instead.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods.",
+      "# Changing an Order\n\n- You can change the shipping address within 1 hour of placing an order.\n- Items in an order cannot be added or swapped; cancel and reorder instead.\n- Orders that have already shipped cannot be modified.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined."
+    ],
+    "retrieved_doc_ids": [
+      "order-cancellation",
+      "subscription-cancellation",
+      "order-modification",
+      "payment-failures"
+    ],
+    "latency_ms": 199.69900000432972,
+    "cost_usd": 2.2470000000000003e-05,
+    "prompt_tokens": 347,
+    "completion_tokens": 64
+  },
+  {
+    "id": "amb-03",
+    "flavor": "ambiguous",
+    "question": "How do I change my order?",
+    "ground_truth": "You can change the shipping address within 1 hour of placing the order, but items cannot be added or swapped and shipped orders cannot be modified.",
+    "source_docs": [
+      "order-modification"
+    ],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Changing an Order\n\n- You can change the shipping address within 1 hour of placing an order.\n- Items in an order cannot be added or swapped; cancel and reorder instead.\n- Orders that have already shipped cannot be modified.",
+      "# Order Cancellation\n\n- You can cancel an order yourself within 1 hour of placing it, from the Orders tab.\n- After 1 hour, contact support and we will try to stop it, but cannot guarantee it.\n- Once an order has shipped it cannot be cancelled; you must return it instead.",
+      "# Order Tracking\n\n- A tracking number is emailed to you as soon as your order ships.\n- You can also track orders under the Orders tab in your account.\n- Tracking can take up to 24 hours to show movement after it is generated.",
+      "# Resetting Your Password\n\n- Use the Forgot Password link on the sign-in page.\n- A reset email is sent; the reset link is valid for 60 minutes.\n- If you do not receive it, check spam or request a new link."
+    ],
+    "retrieved_doc_ids": [
+      "order-modification",
+      "order-cancellation",
+      "order-tracking",
+      "account-password-reset"
+    ],
+    "latency_ms": 147.63680000032764,
+    "cost_usd": 1.768e-05,
+    "prompt_tokens": 336,
+    "completion_tokens": 11
+  },
+  {
+    "id": "amb-04",
+    "flavor": "ambiguous",
+    "question": "What are my plan options?",
+    "ground_truth": "There are three plans: Basic (free), Plus ($9/month), and Pro ($19/month).",
+    "source_docs": [
+      "subscription-plans"
+    ],
+    "answer": "You have the following plan options:\n\n- Basic: free, includes standard features\n- Plus: $9 per month\n- Pro: $19 per month, adds priority support and early access to new features [subscription-plans]",
+    "contexts": [
+      "# Subscription Plans\n\n- Basic is free and includes standard features.\n- Plus costs $9 per month.\n- Pro costs $19 per month and adds priority support and early access to new features.\n- Annual billing saves two months compared with monthly billing.",
+      "# Business Accounts\n\n- Orders over 50 units qualify for volume discounts.\n- Business accounts get a dedicated account manager.\n- Approved business accounts can use Net-30 payment terms.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined."
+    ],
+    "retrieved_doc_ids": [
+      "subscription-plans",
+      "business-accounts",
+      "subscription-cancellation",
+      "payment-failures"
+    ],
+    "latency_ms": 201.89660000323784,
+    "cost_usd": 2.0010000000000003e-05,
+    "prompt_tokens": 325,
+    "completion_tokens": 47
+  },
+  {
+    "id": "amb-05",
+    "flavor": "ambiguous",
+    "question": "Why was my payment rejected?",
+    "ground_truth": "A payment can be declined for an incorrect card number, expiry, CVV, or billing ZIP, or insufficient funds; after 3 failed attempts checkout is locked for 24 hours.",
+    "source_docs": [
+      "payment-failures"
+    ],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined.",
+      "# Accepted Payment Methods\n\n- We accept Visa, Mastercard, and American Express.\n- We accept PayPal and Northwind gift cards.\n- We do not accept cash on delivery (COD) or cryptocurrency.\n- Only one gift card can be applied per order.",
+      "# Refund Processing\n\n- Refunds are issued after we receive and inspect the returned item.\n- Once approved, refunds take 5 to 10 business days to appear.\n- Refunds are always issued to the original payment method.\n- If you paid with a Northwind gift card, the refund is returned as gift-card balance.\n- Original shipping charges are non-refundable unless the item was defective.",
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost."
+    ],
+    "retrieved_doc_ids": [
+      "payment-failures",
+      "payment-methods",
+      "refunds-processing",
+      "damaged-items"
+    ],
+    "latency_ms": 2209.100000007311,
+    "cost_usd": 1.963e-05,
+    "prompt_tokens": 375,
+    "completion_tokens": 11
+  },
+  {
+    "id": "amb-06",
+    "flavor": "ambiguous",
+    "question": "How do I get a discount?",
+    "ground_truth": "Subscribing to the newsletter gives a one-time 10% off code, but only one promo code can be used per order and codes cannot be combined.",
+    "source_docs": [
+      "discounts-promotions"
+    ],
+    "answer": "To get a discount, you can try the following options:\n\n1. Subscribe to our newsletter to receive a one-time 10% off code [discounts-promotions].\n2. Place an order of 50 units or more to qualify for volume discounts [business-accounts].\n3. Consider upgrading to an annual billing plan for your subscription, which can save you two months compared to monthly billing [subscription-plans].",
+    "contexts": [
+      "# Discounts and Promotions\n\n- Only one promo code can be applied per order.\n- Promo codes cannot be combined with each other.\n- Subscribing to the newsletter gives you a one-time 10% off code.",
+      "# Business Accounts\n\n- Orders over 50 units qualify for volume discounts.\n- Business accounts get a dedicated account manager.\n- Approved business accounts can use Net-30 payment terms.",
+      "# Subscription Plans\n\n- Basic is free and includes standard features.\n- Plus costs $9 per month.\n- Pro costs $19 per month and adds priority support and early access to new features.\n- Annual billing saves two months compared with monthly billing.",
+      "# Accepted Payment Methods\n\n- We accept Visa, Mastercard, and American Express.\n- We accept PayPal and Northwind gift cards.\n- We do not accept cash on delivery (COD) or cryptocurrency.\n- Only one gift card can be applied per order."
+    ],
+    "retrieved_doc_ids": [
+      "discounts-promotions",
+      "business-accounts",
+      "subscription-plans",
+      "payment-methods"
+    ],
+    "latency_ms": 3437.3006999958307,
+    "cost_usd": 2.2219999999999997e-05,
+    "prompt_tokens": 310,
+    "completion_tokens": 84
+  },
+  {
+    "id": "multi-01",
+    "flavor": "multi-hop",
+    "question": "My order has not shipped yet and I want to cancel it and get my money back to my card. How long until I see the refund?",
+    "ground_truth": "You can cancel within 1 hour of placing the order, and once the return/cancellation is approved the refund goes to your original card in 5 to 10 business days.",
+    "source_docs": [
+      "order-cancellation",
+      "refunds-processing"
+    ],
+    "answer": "I don't know based on the available documentation. The context does not mention the refund process for cancelled orders that have not shipped yet.",
+    "contexts": [
+      "# Order Cancellation\n\n- You can cancel an order yourself within 1 hour of placing it, from the Orders tab.\n- After 1 hour, contact support and we will try to stop it, but cannot guarantee it.\n- Once an order has shipped it cannot be cancelled; you must return it instead.",
+      "# Refund Processing\n\n- Refunds are issued after we receive and inspect the returned item.\n- Once approved, refunds take 5 to 10 business days to appear.\n- Refunds are always issued to the original payment method.\n- If you paid with a Northwind gift card, the refund is returned as gift-card balance.\n- Original shipping charges are non-refundable unless the item was defective.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods."
+    ],
+    "retrieved_doc_ids": [
+      "order-cancellation",
+      "refunds-processing",
+      "returns-policy",
+      "subscription-cancellation"
+    ],
+    "latency_ms": 5606.323900006828,
+    "cost_usd": 2.2340000000000003e-05,
+    "prompt_tokens": 402,
+    "completion_tokens": 28
+  },
+  {
+    "id": "multi-02",
+    "flavor": "multi-hop",
+    "question": "I paid with a Northwind gift card and want to return the item. How will I be refunded?",
+    "ground_truth": "Returns are accepted within 30 days, and since you paid with a gift card the refund is returned as gift-card balance to your original payment method.",
+    "source_docs": [
+      "returns-policy",
+      "refunds-processing"
+    ],
+    "answer": "If you paid with a Northwind gift card and want to return the item, the refund will be returned as gift-card balance [refunds-processing].",
+    "contexts": [
+      "# Refund Processing\n\n- Refunds are issued after we receive and inspect the returned item.\n- Once approved, refunds take 5 to 10 business days to appear.\n- Refunds are always issued to the original payment method.\n- If you paid with a Northwind gift card, the refund is returned as gift-card balance.\n- Original shipping charges are non-refundable unless the item was defective.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# Accepted Payment Methods\n\n- We accept Visa, Mastercard, and American Express.\n- We accept PayPal and Northwind gift cards.\n- We do not accept cash on delivery (COD) or cryptocurrency.\n- Only one gift card can be applied per order."
+    ],
+    "retrieved_doc_ids": [
+      "refunds-processing",
+      "returns-policy",
+      "shipping-domestic",
+      "payment-methods"
+    ],
+    "latency_ms": 4483.721500000684,
+    "cost_usd": 2.4180000000000002e-05,
+    "prompt_tokens": 434,
+    "completion_tokens": 31
+  },
+  {
+    "id": "multi-03",
+    "flavor": "multi-hop",
+    "question": "My electronics item arrived damaged. Is it covered and how do I get a replacement?",
+    "ground_truth": "Report the damage within 48 hours with photos to get a free replacement; electronics are also covered by a 1-year limited warranty for manufacturing defects.",
+    "source_docs": [
+      "damaged-items",
+      "warranty-policy"
+    ],
+    "answer": "Your electronics item arrived damaged. According to the [damaged-items] policy, you can report a damaged or defective item within 48 hours of delivery. Include photos of the damage when you contact support. If your claim is approved, you will receive a free replacement at no shipping cost.",
+    "contexts": [
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost.",
+      "# Warranty\n\n- Electronics come with a 1-year limited warranty.\n- The warranty covers manufacturing defects, not accidental or misuse damage.\n- Warranty claims require proof of purchase.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Contacting Support\n\n- Live chat is available 24/7 from the Help menu.\n- Email support@northwind.example for a response within 24 hours.\n- Phone support is available Monday to Friday, 9am to 6pm ET."
+    ],
+    "retrieved_doc_ids": [
+      "damaged-items",
+      "warranty-policy",
+      "returns-policy",
+      "contact-support"
+    ],
+    "latency_ms": 3550.9388000064064,
+    "cost_usd": 2.132e-05,
+    "prompt_tokens": 332,
+    "completion_tokens": 59
+  },
+  {
+    "id": "multi-04",
+    "flavor": "multi-hop",
+    "question": "Does my international order qualify for free shipping if it is over $50?",
+    "ground_truth": "No. Free shipping over $50 applies only to domestic standard shipping; international orders are not eligible for free shipping.",
+    "source_docs": [
+      "shipping-domestic",
+      "shipping-international"
+    ],
+    "answer": "No, your international order does not qualify for free shipping, regardless of the order total [shipping-international].",
+    "contexts": [
+      "# International Shipping\n\nNorthwind ships to 40 countries.\n\n- International delivery takes 10 to 21 business days.\n- Import duties, customs fees, and taxes are the responsibility of the customer.\n- International orders are not eligible for free shipping.\n- Tracking is available but may not update while in transit through customs.",
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# Accepted Payment Methods\n\n- We accept Visa, Mastercard, and American Express.\n- We accept PayPal and Northwind gift cards.\n- We do not accept cash on delivery (COD) or cryptocurrency.\n- Only one gift card can be applied per order.",
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-international",
+      "shipping-domestic",
+      "payment-methods",
+      "damaged-items"
+    ],
+    "latency_ms": 4487.702899990836,
+    "cost_usd": 2.129e-05,
+    "prompt_tokens": 389,
+    "completion_tokens": 23
+  },
+  {
+    "id": "multi-05",
+    "flavor": "multi-hop",
+    "question": "I just created an account but cannot sign in and need to reset my password. What should I do?",
+    "ground_truth": "First activate the account using the verification link emailed at sign-up (valid 24 hours), then use the Forgot Password link to get a reset email whose link is valid for 60 minutes.",
+    "source_docs": [
+      "account-creation",
+      "account-password-reset"
+    ],
+    "answer": "To reset your password, use the Forgot Password link on the sign-in page. A reset email will be sent to you with a valid link for 60 minutes. If you don't receive it, check your spam folder or request a new link. [account-password-reset]",
+    "contexts": [
+      "# Resetting Your Password\n\n- Use the Forgot Password link on the sign-in page.\n- A reset email is sent; the reset link is valid for 60 minutes.\n- If you do not receive it, check spam or request a new link.",
+      "# Creating an Account\n\n- Sign up with an email address and a password of at least 8 characters.\n- A verification link is emailed to you; click it to activate the account.\n- The verification link expires after 24 hours.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined.",
+      "# Data and Privacy\n\n- We do not sell your personal data to third parties.\n- You can request deletion of your account data by emailing privacy@northwind.example.\n- We honor GDPR and CCPA data-access and deletion requests."
+    ],
+    "retrieved_doc_ids": [
+      "account-password-reset",
+      "account-creation",
+      "payment-failures",
+      "data-privacy"
+    ],
+    "latency_ms": 3450.164699999732,
+    "cost_usd": 2.228e-05,
+    "prompt_tokens": 356,
+    "completion_tokens": 56
+  },
+  {
+    "id": "multi-06",
+    "flavor": "multi-hop",
+    "question": "Can I combine my newsletter discount with the Pro plan's early access?",
+    "ground_truth": "The newsletter gives a one-time 10% off code limited to one promo code per order, and Pro ($19/month) separately includes priority support and early access; the discount applies to orders, not the plan benefits.",
+    "source_docs": [
+      "discounts-promotions",
+      "subscription-plans"
+    ],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Discounts and Promotions\n\n- Only one promo code can be applied per order.\n- Promo codes cannot be combined with each other.\n- Subscribing to the newsletter gives you a one-time 10% off code.",
+      "# Subscription Plans\n\n- Basic is free and includes standard features.\n- Plus costs $9 per month.\n- Pro costs $19 per month and adds priority support and early access to new features.\n- Annual billing saves two months compared with monthly billing.",
+      "# Business Accounts\n\n- Orders over 50 units qualify for volume discounts.\n- Business accounts get a dedicated account manager.\n- Approved business accounts can use Net-30 payment terms.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods."
+    ],
+    "retrieved_doc_ids": [
+      "discounts-promotions",
+      "subscription-plans",
+      "business-accounts",
+      "subscription-cancellation"
+    ],
+    "latency_ms": 4234.245200001169,
+    "cost_usd": 1.628e-05,
+    "prompt_tokens": 308,
+    "completion_tokens": 11
+  },
+  {
+    "id": "multi-07",
+    "flavor": "multi-hop",
+    "question": "My payment keeps failing during checkout and I am worried I will miss the order cancellation window. What happens?",
+    "ground_truth": "After 3 failed payment attempts checkout is locked for 24 hours, and you can still cancel an order within 1 hour of successfully placing it.",
+    "source_docs": [
+      "payment-failures",
+      "order-cancellation"
+    ],
+    "answer": "If your payment keeps failing during checkout and you're worried you'll miss the order cancellation window, you can try to cancel the order yourself within 1 hour of placing it from the Orders tab [order-cancellation]. If you've already exceeded this time frame, contact support and we will try to stop it, but cannot guarantee it [order-cancellation].",
+    "contexts": [
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined.",
+      "# Order Cancellation\n\n- You can cancel an order yourself within 1 hour of placing it, from the Orders tab.\n- After 1 hour, contact support and we will try to stop it, but cannot guarantee it.\n- Once an order has shipped it cannot be cancelled; you must return it instead.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods.",
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost."
+    ],
+    "retrieved_doc_ids": [
+      "payment-failures",
+      "order-cancellation",
+      "subscription-cancellation",
+      "damaged-items"
+    ],
+    "latency_ms": 2340.054800006328,
+    "cost_usd": 2.386e-05,
+    "prompt_tokens": 362,
+    "completion_tokens": 72
+  },
+  {
+    "id": "adv-01",
+    "flavor": "adversarial",
+    "question": "What is the name of Northwind's CEO?",
+    "ground_truth": "I don't know based on the available documentation.",
+    "source_docs": [],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# Contacting Support\n\n- Live chat is available 24/7 from the Help menu.\n- Email support@northwind.example for a response within 24 hours.\n- Phone support is available Monday to Friday, 9am to 6pm ET.",
+      "# International Shipping\n\nNorthwind ships to 40 countries.\n\n- International delivery takes 10 to 21 business days.\n- Import duties, customs fees, and taxes are the responsibility of the customer.\n- International orders are not eligible for free shipping.\n- Tracking is available but may not update while in transit through customs.",
+      "# Refund Processing\n\n- Refunds are issued after we receive and inspect the returned item.\n- Once approved, refunds take 5 to 10 business days to appear.\n- Refunds are always issued to the original payment method.\n- If you paid with a Northwind gift card, the refund is returned as gift-card balance.\n- Original shipping charges are non-refundable unless the item was defective."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-domestic",
+      "contact-support",
+      "shipping-international",
+      "refunds-processing"
+    ],
+    "latency_ms": 5312.366800004384,
+    "cost_usd": 2.188e-05,
+    "prompt_tokens": 420,
+    "completion_tokens": 11
+  },
+  {
+    "id": "adv-02",
+    "flavor": "adversarial",
+    "question": "Do you offer same-day drone delivery?",
+    "ground_truth": "I don't know based on the available documentation.",
+    "source_docs": [],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Accepted Payment Methods\n\n- We accept Visa, Mastercard, and American Express.\n- We accept PayPal and Northwind gift cards.\n- We do not accept cash on delivery (COD) or cryptocurrency.\n- Only one gift card can be applied per order.",
+      "# Discounts and Promotions\n\n- Only one promo code can be applied per order.\n- Promo codes cannot be combined with each other.\n- Subscribing to the newsletter gives you a one-time 10% off code.",
+      "# Changing an Order\n\n- You can change the shipping address within 1 hour of placing an order.\n- Items in an order cannot be added or swapped; cancel and reorder instead.\n- Orders that have already shipped cannot be modified.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item."
+    ],
+    "retrieved_doc_ids": [
+      "payment-methods",
+      "discounts-promotions",
+      "order-modification",
+      "returns-policy"
+    ],
+    "latency_ms": 3449.6473999897717,
+    "cost_usd": 1.7780000000000003e-05,
+    "prompt_tokens": 338,
+    "completion_tokens": 11
+  },
+  {
+    "id": "adv-03",
+    "flavor": "adversarial",
+    "question": "How much does the Northwind X1 laptop cost?",
+    "ground_truth": "I don't know based on the available documentation.",
+    "source_docs": [],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# Subscription Plans\n\n- Basic is free and includes standard features.\n- Plus costs $9 per month.\n- Pro costs $19 per month and adds priority support and early access to new features.\n- Annual billing saves two months compared with monthly billing.",
+      "# International Shipping\n\nNorthwind ships to 40 countries.\n\n- International delivery takes 10 to 21 business days.\n- Import duties, customs fees, and taxes are the responsibility of the customer.\n- International orders are not eligible for free shipping.\n- Tracking is available but may not update while in transit through customs.",
+      "# Contacting Support\n\n- Live chat is available 24/7 from the Help menu.\n- Email support@northwind.example for a response within 24 hours.\n- Phone support is available Monday to Friday, 9am to 6pm ET."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-domestic",
+      "subscription-plans",
+      "shipping-international",
+      "contact-support"
+    ],
+    "latency_ms": 3671.5228999964893,
+    "cost_usd": 2.033e-05,
+    "prompt_tokens": 389,
+    "completion_tokens": 11
+  },
+  {
+    "id": "adv-04",
+    "flavor": "adversarial",
+    "question": "What is the warranty period for furniture?",
+    "ground_truth": "I don't know based on the available documentation.",
+    "source_docs": [],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Warranty\n\n- Electronics come with a 1-year limited warranty.\n- The warranty covers manufacturing defects, not accidental or misuse damage.\n- Warranty claims require proof of purchase.",
+      "# Damaged or Defective Items\n\n- Report a damaged or defective item within 48 hours of delivery.\n- Include photos of the damage when you contact support.\n- Approved claims receive a free replacement at no shipping cost.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined."
+    ],
+    "retrieved_doc_ids": [
+      "warranty-policy",
+      "damaged-items",
+      "returns-policy",
+      "payment-failures"
+    ],
+    "latency_ms": 4310.9490999922855,
+    "cost_usd": 1.8030000000000002e-05,
+    "prompt_tokens": 343,
+    "completion_tokens": 11
+  },
+  {
+    "id": "adv-05",
+    "flavor": "adversarial",
+    "question": "Does Northwind have a physical store in Tokyo?",
+    "ground_truth": "I don't know based on the available documentation.",
+    "source_docs": [],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# International Shipping\n\nNorthwind ships to 40 countries.\n\n- International delivery takes 10 to 21 business days.\n- Import duties, customs fees, and taxes are the responsibility of the customer.\n- International orders are not eligible for free shipping.\n- Tracking is available but may not update while in transit through customs.",
+      "# Contacting Support\n\n- Live chat is available 24/7 from the Help menu.\n- Email support@northwind.example for a response within 24 hours.\n- Phone support is available Monday to Friday, 9am to 6pm ET.",
+      "# Accepted Payment Methods\n\n- We accept Visa, Mastercard, and American Express.\n- We accept PayPal and Northwind gift cards.\n- We do not accept cash on delivery (COD) or cryptocurrency.\n- Only one gift card can be applied per order."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-domestic",
+      "shipping-international",
+      "contact-support",
+      "payment-methods"
+    ],
+    "latency_ms": 4337.338000012096,
+    "cost_usd": 2.0379999999999998e-05,
+    "prompt_tokens": 390,
+    "completion_tokens": 11
+  },
+  {
+    "id": "adv-06",
+    "flavor": "adversarial",
+    "question": "What are your store hours on Christmas Day?",
+    "ground_truth": "I don't know based on the available documentation.",
+    "source_docs": [],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Domestic Shipping\n\nNorthwind ships domestically via standard and expedited options.\n\n- Standard shipping takes 5 to 7 business days.\n- Standard shipping is free on orders over $50; otherwise it costs $5.99.\n- Expedited shipping takes 2 to 3 business days and costs $14.99 flat.\n- Orders placed before 1pm ET on a business day ship the same day.\n- We ship Monday through Friday, excluding public holidays.",
+      "# Product Availability\n\n- Out-of-stock items display an expected restock date when available.\n- You can sign up for a back-in-stock alert on the product page.\n- Adding an item to your cart does not reserve stock.",
+      "# Returns Policy\n\n- Items can be returned within 30 days of delivery.\n- Returned items must be unused and have original tags attached.\n- We provide a prepaid return shipping label for domestic returns.\n- Final-sale and clearance items cannot be returned.\n- To start a return, go to Orders in your account and select Return Item.",
+      "# Accepted Payment Methods\n\n- We accept Visa, Mastercard, and American Express.\n- We accept PayPal and Northwind gift cards.\n- We do not accept cash on delivery (COD) or cryptocurrency.\n- Only one gift card can be applied per order."
+    ],
+    "retrieved_doc_ids": [
+      "shipping-domestic",
+      "product-availability",
+      "returns-policy",
+      "payment-methods"
+    ],
+    "latency_ms": 3342.0541000086814,
+    "cost_usd": 2.018e-05,
+    "prompt_tokens": 386,
+    "completion_tokens": 11
+  },
+  {
+    "id": "adv-07",
+    "flavor": "adversarial",
+    "question": "Can I finance a purchase with a 12-month installment plan?",
+    "ground_truth": "I don't know based on the available documentation.",
+    "source_docs": [],
+    "answer": "I don't know based on the available documentation.",
+    "contexts": [
+      "# Subscription Plans\n\n- Basic is free and includes standard features.\n- Plus costs $9 per month.\n- Pro costs $19 per month and adds priority support and early access to new features.\n- Annual billing saves two months compared with monthly billing.",
+      "# Business Accounts\n\n- Orders over 50 units qualify for volume discounts.\n- Business accounts get a dedicated account manager.\n- Approved business accounts can use Net-30 payment terms.",
+      "# Cancelling a Subscription\n\n- You can cancel anytime from Settings > Subscription.\n- You keep access until the end of the current billing period.\n- We do not issue prorated refunds for partial billing periods.",
+      "# Declined or Failed Payments\n\n- If a card is declined, verify the card number, expiry, CVV, and billing ZIP.\n- Ensure sufficient funds and that the card is approved for online purchases.\n- After 3 failed attempts, checkout is locked for 24 hours for security.\n- Contact your bank if the card keeps getting declined."
+    ],
+    "retrieved_doc_ids": [
+      "subscription-plans",
+      "business-accounts",
+      "subscription-cancellation",
+      "payment-failures"
+    ],
+    "latency_ms": 3456.052200010163,
+    "cost_usd": 1.7480000000000002e-05,
+    "prompt_tokens": 332,
+    "completion_tokens": 11
+  }
+]
