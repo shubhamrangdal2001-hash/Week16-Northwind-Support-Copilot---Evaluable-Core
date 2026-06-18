@@ -21,3 +21,4 @@ langfuse>=2.0
 # Tier A CI gate
 deepeval>=1.0
 pytest>=8.0
+ 
