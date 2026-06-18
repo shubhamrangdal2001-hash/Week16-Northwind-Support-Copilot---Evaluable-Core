@@ -53,3 +53,4 @@ smoke:
 
 clean:
 	rm -rf app/data/chroma app/data/store eval/results experiments/results
+ 
