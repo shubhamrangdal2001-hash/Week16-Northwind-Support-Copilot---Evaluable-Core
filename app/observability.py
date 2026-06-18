@@ -60,3 +60,4 @@ def flush() -> None:
         langfuse_context.flush()
     except Exception:
         pass
+ 
