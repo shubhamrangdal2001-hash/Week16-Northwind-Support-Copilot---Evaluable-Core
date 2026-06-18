@@ -83,3 +83,4 @@ if __name__ == "__main__":
     print("A:", r.answer)
     print("Sources:", r.retrieved_doc_ids)
     print(f"latency={r.latency_ms:.0f}ms cost=${r.cost_usd:.6f}")
+ 
