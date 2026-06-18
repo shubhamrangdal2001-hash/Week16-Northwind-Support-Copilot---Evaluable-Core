@@ -1,0 +1,23 @@
+# Core RAG slice
+openai>=1.40
+chromadb>=0.5
+numpy>=1.26
+python-dotenv>=1.0
+
+# Groq provider + local embeddings
+groq>=0.9
+sentence-transformers>=3.0
+
+# Evaluation
+ragas>=0.2
+datasets>=2.19
+langchain-openai>=0.1
+langchain-community>=0.2
+langchain-groq>=0.1
+
+# Observability
+langfuse>=2.0
+
+# Tier A CI gate
+deepeval>=1.0
+pytest>=8.0
