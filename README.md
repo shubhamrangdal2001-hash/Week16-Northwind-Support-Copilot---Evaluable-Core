@@ -125,7 +125,7 @@ flowchart LR
     D -->|Hybrid| E[Vectorstore]
     D -->|BM25| F[Lexical Index]
     E --> G[RRF Fusion]
-    G --> H[LLM (Groq/OpenAI)]
+    G --> H["LLM (Groq/OpenAI)"]
     H --> I[Answer with Citations]
     I --> J[Langfuse Tracing]
 ```
