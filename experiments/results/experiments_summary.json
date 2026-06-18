@@ -1,0 +1,117 @@
+[
+  {
+    "name": "baseline",
+    "note": "top_k=4, chunk_size=700, prompt=grounded_v1",
+    "metrics": {
+      "faithfulness": 0.6692,
+      "answer_relevancy": 0.2271,
+      "context_precision": 0.25,
+      "context_recall": 0.72,
+      "abstention_accuracy": 0.8571
+    },
+    "delta_vs_baseline": {
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    "operational": {
+      "avg_latency_ms": 0.1,
+      "p95_latency_ms": 0.1,
+      "avg_cost_per_query_usd": 0.0,
+      "total_queries": 32
+    }
+  },
+  {
+    "name": "exp1_topk2",
+    "note": "Fewer retrieved chunks (top_k 4 -> 2)",
+    "metrics": {
+      "faithfulness": 0.6441,
+      "answer_relevancy": 0.2212,
+      "context_precision": 0.38,
+      "context_recall": 0.6,
+      "abstention_accuracy": 0.8571
+    },
+    "delta_vs_baseline": {
+      "faithfulness": -0.0251,
+      "answer_relevancy": -0.0059,
+      "context_precision": 0.13,
+      "context_recall": -0.12
+    },
+    "operational": {
+      "avg_latency_ms": 0.1,
+      "p95_latency_ms": 0.1,
+      "avg_cost_per_query_usd": 0.0,
+      "total_queries": 32
+    }
+  },
+  {
+    "name": "exp2_smallchunks",
+    "note": "Smaller chunks (700 -> 350 chars)",
+    "metrics": {
+      "faithfulness": 0.6692,
+      "answer_relevancy": 0.2271,
+      "context_precision": 0.2667,
+      "context_recall": 0.76,
+      "abstention_accuracy": 0.8571
+    },
+    "delta_vs_baseline": {
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0167,
+      "context_recall": 0.04
+    },
+    "operational": {
+      "avg_latency_ms": 0.1,
+      "p95_latency_ms": 0.1,
+      "avg_cost_per_query_usd": 0.0,
+      "total_queries": 32
+    }
+  },
+  {
+    "name": "exp3_prompt_v2",
+    "note": "Stricter, citation-forcing prompt (grounded_v2)",
+    "metrics": {
+      "faithfulness": 0.6692,
+      "answer_relevancy": 0.2271,
+      "context_precision": 0.2667,
+      "context_recall": 0.76,
+      "abstention_accuracy": 0.8571
+    },
+    "delta_vs_baseline": {
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0167,
+      "context_recall": 0.04
+    },
+    "operational": {
+      "avg_latency_ms": 0.1,
+      "p95_latency_ms": 0.1,
+      "avg_cost_per_query_usd": 0.0,
+      "total_queries": 32
+    }
+  },
+  {
+    "name": "exp4_hybrid",
+    "note": "BONUS: hybrid retrieval (vector + BM25 fused via RRF)",
+    "metrics": {
+      "faithfulness": 0.6865,
+      "answer_relevancy": 0.2289,
+      "context_precision": 0.2867,
+      "context_recall": 0.8,
+      "abstention_accuracy": 0.8571
+    },
+    "delta_vs_baseline": {
+      "faithfulness": 0.0173,
+      "answer_relevancy": 0.0018,
+      "context_precision": 0.0367,
+      "context_recall": 0.08
+    },
+    "operational": {
+      "avg_latency_ms": 0.1,
+      "p95_latency_ms": 0.1,
+      "avg_cost_per_query_usd": 0.0,
+      "total_queries": 32
+    }
+  }
+]
