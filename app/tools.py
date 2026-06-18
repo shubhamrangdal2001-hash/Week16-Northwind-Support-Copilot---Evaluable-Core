@@ -49,3 +49,4 @@ def format_order_answer(result: dict) -> str:
     carrier = f" via {result['carrier']}" if result.get("carrier") else ""
     return (f"Order {result['order_id']} is **{result['status']}**{carrier} "
             f"(ETA: {result['eta']}).")
+ 
