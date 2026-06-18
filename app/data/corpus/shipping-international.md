@@ -6,3 +6,4 @@ Northwind ships to 40 countries.
 - Import duties, customs fees, and taxes are the responsibility of the customer.
 - International orders are not eligible for free shipping.
 - Tracking is available but may not update while in transit through customs.
+ 
