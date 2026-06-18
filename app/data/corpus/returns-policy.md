@@ -5,3 +5,4 @@
 - We provide a prepaid return shipping label for domestic returns.
 - Final-sale and clearance items cannot be returned.
 - To start a return, go to Orders in your account and select Return Item.
+ 
