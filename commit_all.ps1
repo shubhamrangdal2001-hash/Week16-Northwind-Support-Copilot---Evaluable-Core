@@ -18,3 +18,4 @@ Get-ChildItem -Recurse -File | Where-Object {
 
 # Push to GitHub
 git push -u origin main
+ 
