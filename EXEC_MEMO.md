@@ -49,3 +49,4 @@ easy, ambiguous, multi-hop, and adversarial cases; I measure faithfulness,
 answer relevancy, and retrieval quality on every change; traces let me see
 whether a failure is retrieval or generation; and a CI gate blocks regressions
 below my faithfulness floor.
+ 
