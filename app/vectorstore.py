@@ -160,3 +160,4 @@ def get_vectorstore(settings: Settings):
         return ChromaVectorStore(settings.collection)
     except Exception:
         return SimpleVectorStore(settings.collection)
+ 
