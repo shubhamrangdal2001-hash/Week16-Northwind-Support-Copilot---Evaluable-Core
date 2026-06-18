@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+app/data/chroma/
+app/data/store/
+.venv/
+venv/
+.ragas/
+.deepeval/
+*.egg-info/
