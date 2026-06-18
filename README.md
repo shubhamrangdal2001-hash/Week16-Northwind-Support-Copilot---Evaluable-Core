@@ -181,3 +181,4 @@ Changes made after seeing baseline (faithfulness 0.686, answer_relevancy 0.229):
 - Added valid Groq API key to enable real LLM provider
 
 These changes raised context metrics above target; faithfulness and relevancy remain work in progress (larger model or stricter prompt constraints are the next levers).
+ 
