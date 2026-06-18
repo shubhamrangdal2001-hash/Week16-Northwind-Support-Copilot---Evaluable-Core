@@ -163,3 +163,4 @@ def write_corpus() -> list[str]:
 if __name__ == "__main__":
     written = write_corpus()
     print(f"Wrote {len(written)} corpus documents to {CORPUS_DIR}")
+ 
