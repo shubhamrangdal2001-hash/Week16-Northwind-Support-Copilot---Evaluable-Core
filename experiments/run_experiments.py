@@ -97,3 +97,4 @@ def _write_markdown(results: list[dict]) -> None:
 
 if __name__ == "__main__":
     main()
+ 
