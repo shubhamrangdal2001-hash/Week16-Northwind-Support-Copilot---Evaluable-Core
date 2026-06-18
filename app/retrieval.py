@@ -89,3 +89,4 @@ class Retriever:
         # default: dense only
         q_emb = self.embedder.embed([question])[0]
         return self.store.query(q_emb, top_k)
+ 
