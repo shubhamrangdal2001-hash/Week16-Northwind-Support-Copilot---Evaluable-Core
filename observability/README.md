@@ -33,3 +33,4 @@ These two screenshots are referenced from the top-level `README.md`.
   swaps in a no-op `observe` decorator so the pipeline still runs (e.g. offline CI).
 - `score_current_trace()` is available to push eval scores back onto traces if you
   want Ragas numbers visible per-trace in Langfuse.
+ 
