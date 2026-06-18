@@ -16,3 +16,4 @@ Engine: **ragas**  |  Generated: 2026-06-18T13:41:06.567595+00:00
 - p95 latency: 4313.8 ms
 - Avg cost / query: $2e-05
 - Total queries: 32
+ 
