@@ -7,3 +7,4 @@ Northwind ships domestically via standard and expedited options.
 - Expedited shipping takes 2 to 3 business days and costs $14.99 flat.
 - Orders placed before 1pm ET on a business day ship the same day.
 - We ship Monday through Friday, excluding public holidays.
+ 
