@@ -41,3 +41,4 @@ A short, honest read on what it would take to run this RAG slice in production.
 - Golden set is small (32 rows) and synthetic-seeded; grow and diversify it.
 - Single judge model for Ragas/LLM-as-judge introduces judge bias.
 - No multi-tenant access control on the corpus yet.
+ 
