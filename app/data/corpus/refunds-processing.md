@@ -5,3 +5,4 @@
 - Refunds are always issued to the original payment method.
 - If you paid with a Northwind gift card, the refund is returned as gift-card balance.
 - Original shipping charges are non-refundable unless the item was defective.
+ 
