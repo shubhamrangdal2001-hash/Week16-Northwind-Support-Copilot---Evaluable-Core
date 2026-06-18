@@ -110,3 +110,4 @@ PRICING_PER_1M = {
     "mixtral-8x7b-32768": {"input": 0.24, "output": 0.24},
     "gemma2-9b-it": {"input": 0.20, "output": 0.20},
 }
+ 
